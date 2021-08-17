@@ -24,7 +24,8 @@
     baseballsavant.mlb.com to examine various aspects of the game. These projects display my ability
     to scrape web data and turn it into visualizations.</p>
 
-    <h2>Project 1: Determining how a pitcher's ERA predicts their other statistics</h2>
+    <h2>Project 1: Determining how a pitcher's ERA predicts their other statistics
+    <a href = "https://github.com/cgustin99/Data-Science/blob/main/MLBERA.ipynb">Source Code</a></h2>
       <p>ERA (Earned run average) is the average number of runs a pitcher gives up over 9 innings (a standard
         game length). We use <a href = "https://www.espn.com/mlb/stats/player/_/view/pitching/season/2021/seasontype/2/table/pitching/sort/ERA/dir/asc">https://www.espn.com/mlb/stats/player/_/view/pitching/season/2021/seasontype/2/table/pitching/sort/ERA/dir/asc</a>
       to find the current top pitcher's ERAs and plot them to visualize the array of ERAs we see:</p>
@@ -48,7 +49,14 @@
       however, a poor defense behind the pitcher may lead to more men on base and therefore more runs given up by the pitcher. A future project can look at
       FIP (Fielder independent pitching) which examines a pitcher's ERA with a league average defense behind them. </p>
 
-      <h2>Project 2: Which Launch Angle yields the most Home Runs?</h2>
+      <h2>Project 2: Which Launch Angle yields the most Home Runs? <a href = "https://github.com/cgustin99/Data-Science/blob/main/LaunchAngleHR.ipynb">Source Code</a></h2>
+      <p>Launch angle is defined as the angle that the baseball leaves the bat. This can be anywhere from -90 degrees to +90 degrees (stright down and straight up)
+      with 0 degrees being defined as directly horizontal to the ground. We use Statcast data to visualize which angle yields the highest amount of homeruns using <a href = "https://baseballsavant.mlb.com/statcast_hit_probability?year=2021&type=la">https://baseballsavant.mlb.com/statcast_hit_probability?year=2021&type=la</a>
+      Note that we are using current data from the 2021 season only. There is data back to 2015 so a further project could analyze if this best launch angle is consistent among each year.
+      We scrape the data from Statcast using Selenium due to the data being written in Javascript to update daily and import this data into a Pandas dataframe. From here, we use Seaborn to graph the
+      total home runs as a function of launch angle and see a max number of home runs between 27 - 29 degrees. </p>
+      <img src = "LaunchAngle.png"></img>
+      <p>This roughly fits a Gaussian normal distribution which is not out of the ordinary. </p>
     </body>
   </head>
 </html>
