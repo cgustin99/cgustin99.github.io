@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <style>
+
+  .right{
+    height: 100px;
+    width: 260px;
+    border: 5px solid #808B96;
+    float: right;
+  }
+
+  .left{
+    float: left;
+  }
+
+
+  </style>
+  <head>
+    <body style="background-color:LightGray;">
+    <h1>My Data Science Projects</h1>
+    <p>My data science skillset lies in web scraping using BeautifulSoup, data visualization
+    using Pandas and Seaborn/Matplotlib, and data querying using SQL. Another passion of
+    mine is baseball so the following two projects use baseball data from ESPN.com and
+    baseballsavant.mlb.com to examine various aspects of the game. These projects display my ability
+    to scrape web data and turn it into visualizations.</p>
+
+    <h2>Project 1: Determining how a pitcher's ERA predicts their other statistics</h2>
+      <p>ERA (Earned run average) is the average number of runs a pitcher gives up over 9 innings (a standard
+        game length). We use <a href = "https://www.espn.com/mlb/stats/player/_/view/pitching/season/2021/seasontype/2/table/pitching/sort/ERA/dir/asc">https://www.espn.com/mlb/stats/player/_/view/pitching/season/2021/seasontype/2/table/pitching/sort/ERA/dir/asc</a>
+      to find the current top pitcher's ERAs and plot them to visualize the array of ERAs we see:</p>
+      <div class = 'right'>This graph doesn't tell us anything particularly insightful; however, it shows the different ERAs that the top pitchers in MLB possess.</div>
+      <img src="ERA.png" alt="ERA" width="800" height="600">
+
+      <p>Another statistic attributed to a pitcher is called wins. This may be self explanatory but a win is given to a starting pitcher if
+      they pitch at least 5 innings and their team wins the game. (A relief pitcher can also obtain a win but the semantics are different).
+      The statistic of wins has gotten a bad reputation recently due to it's inability to predict a pitcher's true ability. The team behind the pitcher has a lot
+      of the outcome of the pitcher obtaining a win which shows it may not have good predictive power of the pitcher's ability. The following graph shows how a pitcher's ERA has little
+      outcome over the number of wins they are awarded (and therefore why wins may not be a helpful statistic):</p>
+
+      <div class = "right">Clearly, ERA doesn't acurately predict the number of wins a pitcher has. The correlation coefficient is 0.2 which shows low predictive power.</div>
+      <img src = "Wins.png" alt = "wins" width = "800" height = "600"></img>
+
+      <p>The last statistic we will look to see if ERA predicts well is WHIP (Walks and hits per innings pitched). Basically, this statistic tells how many times they walk or give up a hit to a batter
+      in each inning on average. Intuitively, we would think that if we have a low number of walks and hits per inning, we should expect the pitcher to give up less runs:</p>
+      <div class = "right">With a correlation coefficient of 0.73, we see WHIP is a much better predictor of a pitcher's ability than wins.</div>
+      <img src = "WHIP.png" alg = 'whip' width = '800' height = '600'></img>
+      <p>All of this analysis is taken by assuming that ERA is a good predictor. Overall, it is considered a strong predictor of the pitcher's abilities;
+      however, a poor defense behind the pitcher may lead to more men on base and therefore more runs given up by the pitcher. A future project can look at
+      FIP (Fielder independent pitching) which examines a pitcher's ERA with a league average defense behind them. </p>
+
+      <h2>Project 2: Which Launch Angle yields the most Home Runs?</h2>
+    </body>
+  </head>
+</html>
