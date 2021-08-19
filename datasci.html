@@ -19,11 +19,11 @@
     <body style="background-color:LightGray;">
     <h1>My Data Science Projects</h1>
     <p>My data science skillset lies in web scraping using BeautifulSoup, data visualization
-    using Pandas and Seaborn/Matplotlib, and data querying using SQL. Another passion of
-    mine is baseball so the following two projects use baseball data from ESPN.com and
-    baseballsavant.mlb.com to examine various aspects of the game. These projects display my ability
+    using Pandas and Seaborn/Matplotlib, and data querying using SQL. A passion of
+    mine is baseball so the first two projects use baseball data from ESPN.com and
+    baseballsavant.mlb.com to examine various aspects of the game. The third project scrapes
+    stock data from CNN's business website and graphs the volatility of a particular stock for a finite length of time. These projects display my ability
     to scrape web data and turn it into visualizations.</p>
-
     <h2>Project 1: Determining how a pitcher's ERA predicts their other statistics
     <a href = "https://github.com/cgustin99/Data-Science/blob/main/MLBERA.ipynb">Source Code</a></h2>
       <p>ERA (Earned run average) is the average number of runs a pitcher gives up over 9 innings (a standard
@@ -57,6 +57,12 @@
       total home runs as a function of launch angle and see a max number of home runs between 27 - 29 degrees. </p>
       <img src = "LaunchAngle.png"></img>
       <p>This roughly fits a Gaussian normal distribution which is not out of the ordinary. </p>
+
+      <h2>Project 3: Scraping Stock Data <a href = 'https://github.com/cgustin99/Data-Science/blob/main/StocksScraper.ipynb'>Source Code</a></h2>
+        <p>Using <a href = "https://money.cnn.com/data/hotstocks/index.html">https://money.cnn.com/data/hotstocks/index.html</a>
+        I scraped stock data the same way as the previous projects and created a data frame of stock prices, change in price, and percent change.
+        From here, I examined one stock in particular, "Pfizer", and scraped its stock price for a 30 minute period and graphed it.</p>
+        <img src = 'PfizerStock.png' alt = 'PFE'></img>
     </body>
   </head>
 </html>
